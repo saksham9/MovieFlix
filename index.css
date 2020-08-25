@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+body {
+  height: 120vh;
+  width: 100%;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  scrollbar-width: thin;
+}
+
+header{
+    height: 20%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE53B;
+    color: white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+.main-content{
+    height: 70%;
+    width: 100%;  
+}
+.main-content h3{
+    margin-left: 40px;
+}
+.main-content .card-holder{
+    height: 320px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+ 
+
+.main-content .card-holder .card{
+    
+    margin: 10px;
+    height: 280px;
+    width: 200px !important;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    flex: 0 0 auto;
+    position: relative; 
+    transform: rotate(0deg);
+    transform-origin: 100% 0%;
+    transform-style: preserve-3d;
+    transition: .8s ease-in-out;
+}
+.main-content .card-holder .card .front img{
+    height: 280px;
+    width: 200px;
+    border-radius: 10px;
+}
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #17141d;
+    color: white;
+    border-radius: 10px;
+    
+  }
+  .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+  }
+  .back {
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(-180deg);
+  }
+  .main-content .card-holder .card .back h4{
+      margin-top:20px;
+      margin-bottom: 0;
+      margin-left: 5px; 
+  }
+  .main-content .card-holder .card .back p{
+      font-size: small;
+      margin-bottom: 0;
+      margin-left: 5px; 
+  }
+  .back a{
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+  }
+  .main-content .card-holder .card:hover {
+    transform: rotateY(180deg) translateX(100%);
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar { 
+    height: 6px;  
+    width: 10px;
+    border: 1px solid white; 
+    border-radius: 10px;
+} 
+
+::-webkit-scrollbar-thumb{
+    background-color: darkgrey;
+    outline: 1px solid white;
+    border-radius: 10px;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
